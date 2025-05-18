@@ -1,16 +1,14 @@
 package edu.lista002;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class qst007 {
     public static void main(String[] args) {
-
-    Scanner scan = new Scanner(System.in);
-
-    
     int[] vet1 = new int[5];
     int[] vet2 = new int[5];
-    
+    int[] resultado = new int[5];
+    Scanner scan = new Scanner(System.in);
+        
     System.out.println("Digite os elementos do vetor 1:");
     for(int i = 0; i < 5; i++){
         vet1[i] = scan.nextInt();
@@ -21,7 +19,6 @@ public class qst007 {
         vet2[i] = scan.nextInt();
     }
 
-    int[] resultado = new int[5];
     resultado = soma(vet1, vet2);
 
     System.out.println("O resoltado é:");
