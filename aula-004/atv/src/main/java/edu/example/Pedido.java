@@ -20,7 +20,7 @@ public class Pedido {
     } 
 
     public String exbirDetalhesDoPedido(){
-        return String.format("Obrigado pela preferencia!\nId %d\nDescrição %s\nValor Total: %.2f\n", IdPedido, Descricao, valorTotalVendas);
+        return String.format("Obrigado pela preferencia!\nId %d\nDescrição %s\nValor Total: %.2f\n", IdPedido, Descricao, ValorTotal);
     }
 
     public static int getTotalPedidosRealizados() {
