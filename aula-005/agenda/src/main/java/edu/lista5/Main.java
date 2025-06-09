@@ -7,7 +7,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         Agenda agenda = new Agenda();
         Contato contato;
-        String nome, telefone, email;
+        String nome, telefone, email, busca;
         int op;
 
         do{
@@ -23,11 +23,11 @@ public class Main {
 
             switch (op) {
                 case 0:
-                    System.out.println("Saindo...\n");
+                    System.out.println("\nSaindo...\n");
                     break;
 
                 case 1:
-                    System.out.println("Insira as informações do contato: ");
+                    System.out.println("\nInsira as informações do contato: ");
                     System.out.print("Nome: ");
                     nome = scan.nextLine();
                     System.out.print("Telefone: ");
@@ -38,7 +38,7 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("Remover contato:");
+                    System.out.println("\nRemover contato:");
                     System.out.print("Nome: ");
                     nome = scan.nextLine();
                     if (agenda.removerContato(nome)){
@@ -49,25 +49,27 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("Buscar contato: ");
+                    System.out.println("\nBuscar contato: ");
                     System.out.print("Nome: ");
                     nome = scan.nextLine();
                     contato = agenda.buscarContato(nome);
                     if(contato == null){
                         System.out.println("Contato não encontrado!");
                     } else {
-                        contato.toString();
+                        busca = contato.toString();
+                        System.out.println("\nInformação do contato:");
+                        System.out.println(busca);
                     }
                     break;
 
                 case 4:
-                    System.out.println("Todos os contatos:");
+                    System.out.println("\nTodos os contatos:");
                     agenda.listarContatos();
                     break;
 
     
                 default:
-                    System.out.println("Opção invalida!");
+                    System.out.println("\nOpção invalida!");
                     break;
             }
         } while(op != 0);

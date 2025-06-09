@@ -3,9 +3,7 @@ package edu.lista5;
 public class Livro {
     private String titulo;
     private String autor;
-    private boolean emprestado = false;
-
-    public Livro(){}
+    private boolean emprestado;
 
     public Livro(String titulo, String autor){
         this.titulo = titulo;
@@ -25,21 +23,23 @@ public class Livro {
         return emprestado;
     }
 
-    public void setTitulo(String titulo){
-        this.titulo = titulo;
+    public boolean emprestar(){
+        return emprestado = true;
     }
 
-    public void setAutor(String autor){
-        this.autor = autor;
-    }
-
-    public void setEmprestado(boolean emprestado){
-        this.emprestado = emprestado;
+    public boolean devolver(){
+        return emprestado = false;
     }
 
     @Override
     public String toString(){
-        return String.format("\nDados do livro:\nTitulo: %s\nAutor: %s\nEmprestado: %s\n", titulo, autor, emprestado);
+        String mensagem;
+        if (emprestado == true) {
+            mensagem = "Não";
+        } else {
+            mensagem = "Sim";
+        }
+        return String.format("\nDados do livro:\nTitulo: %s\nAutor: %s\nDisponivel p/ emprestimo: %s\n", titulo, autor, mensagem);
     }
 
 }

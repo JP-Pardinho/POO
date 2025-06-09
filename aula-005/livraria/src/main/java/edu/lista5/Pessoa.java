@@ -1,10 +1,9 @@
 package edu.lista5;
 
-public class Pessoa {
+public class Pessoa
+ {
     private String nome;
     private String cpf;
-
-    public Pessoa(){}
 
     public Pessoa(String nome, String cpf){
         this.nome = nome;
@@ -31,6 +30,5 @@ public class Pessoa {
     public String toString(){
         return String.format("\nDados do cliente:\nNome: %s\nCPF: %s", nome, cpf);
     }
-
 
 }

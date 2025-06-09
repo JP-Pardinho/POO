@@ -7,8 +7,6 @@ public class Emprestimo {
     private Livro livro;
     private LocalDate dataEmprestimo;
 
-    public Emprestimo(){}
-
     public Emprestimo(Pessoa pessoa, Livro livro){
         this.pessoa = pessoa;
         this.livro = livro;
@@ -27,20 +25,8 @@ public class Emprestimo {
         return dataEmprestimo;
     }
 
-    public void setPessoa(Pessoa pessoa){
-        this.pessoa = pessoa;
-    }
-
-    public void setLivro(Livro livro){
-        this.livro = livro;
-    }
-
-    public void setDataEmprestimo(LocalDate dataEmprestimo){
-        this.dataEmprestimo = dataEmprestimo;
-    }
-
     @Override
     public String toString(){
-        return String.format("\nDados do emprestimo:\nPessoa:", pessoa, livro, dataEmprestimo);
+        return String.format("\nDados do emprestimo:\nCliente: " + pessoa + "\nLivro: " + livro + "\nData do emprestimo: " + dataEmprestimo);
     }
 }
