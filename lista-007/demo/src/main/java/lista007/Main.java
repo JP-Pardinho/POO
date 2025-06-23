@@ -8,16 +8,18 @@ public class Main {
         ArrayList<Forma> formas = new ArrayList<>();
         Random random = new Random();
 
+        System.out.println("=== Criando 10 formas aleatórias ===");
         for (int i = 0; i < 10; i++) {
             Forma forma = criarForma(random);
             formas.add(forma);
+            System.out.println("\nForma " + (i+1) + " criada:");
+            forma.imprimirDados(); 
         }
 
-        System.out.println("=== Áreas das Formas Criadas ===");
+        System.out.println("\n=== Resumo das Formas Criadas ===");
         for (Forma forma : formas) {
-            System.out.printf("Tipo: %s - Área: %.2f%n", 
-                            forma.getClass().getSimpleName(), 
-                            forma.calcularArea());
+            System.out.println("\nTipo: " + forma.getClass().getSimpleName());
+            forma.imprimirDados();
         }
     }
 
