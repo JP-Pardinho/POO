@@ -1,6 +1,6 @@
 package lista007;
 
-public abstract interface Forma {
+public interface Forma {
     double calcularArea();    
     void imprimirDados(); 
 }
