@@ -9,10 +9,6 @@ public abstract class ContatoTelefone implements Contato {
         this.numero = numero;
     }
 
-    public String getNumero() {
-        return numero;
-    }
-
     @Override
     public String getNome() {
         return nome;
